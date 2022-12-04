@@ -1,0 +1,121 @@
+
+/* Service Component */
+.Courses {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 0px auto;
+  padding: 20px 0px 10px 5%;
+  row-gap: 20px;
+  background-image: url('../img/courseBg.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+
+}
+.course:hover {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+.course {
+  padding: 10px;
+  width: 360px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
+    rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+  border: 1px solid var(--primary);
+  background-color: #fff;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+.course img {
+  width: 300px;
+  margin: 0px auto;
+  display: block;
+  object-fit: cover;
+}
+.course img:hover {
+  transform: scale(1.1);
+  transition: all 0.5s ease;
+}
+.type,
+.tag {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.tag {
+  font-size: 11px;
+}
+.tag p:nth-child(1) {
+  background-color: var(--text);
+  color: var(--white);
+  padding: 5px 8px;
+  border-radius: 5px;
+  margin-right: 5px;
+}
+.tag p:nth-child(2) {
+  color: var(--text);
+  padding: 5px 5px;
+  border: 2px solid var(--primary);
+  border-radius: 5px;
+}
+
+.price p {
+  font-size: 20px;
+  font-weight: bold;
+  color: rgb(191, 50, 7);
+}
+.title h3 {
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--title);
+  margin-top: 10px;
+}
+.details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 10px;
+}
+.details p {
+  font-size: 14px;
+  color: var(--text);
+  font-weight: 600;
+}
+.coursebtn {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 10px;
+  gap: 15px;
+}
+.coursebtn button {
+  background-color: var(--primary);
+  color: var(--white);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.coursebtn button:nth-child(2) {
+  background-color: #fff;
+  color: var(--primary);
+  border: 2px solid var(--primary);
+}
+.coursebtn button:hover {
+  transform: scale(1.1);
+  transition: all 0.5s ease;
+ 
+}
+@media screen and (max-width: 1300px) {
+  .Courses {
+    grid-template-columns: 1fr;
+  }
+  .course {
+    width: 90%;
+    justify-content: center;
+  }
+  .course img {
+    width: 100%;
+  }
+}
