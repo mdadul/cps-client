@@ -9,14 +9,15 @@ export default function CourseForm() {
        <Form style={{height:"520px"}}>
         <TextInput
             type="text"
-            placeholder ="Enter Course Title"
+            placeholder ="Enter Image Link"
             required
         />
         <TextInput
             type="text"
-            placeholder ="Enter Course Description"
+            placeholder ="Enter Course Type"
             required
         />
+        <select />
         <TextInput
             type="text"
             placeholder ="Enter Course Duration"

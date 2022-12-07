@@ -2,7 +2,6 @@ import React from "react";
 import classes from "../stylesheet/Nav.module.css";
 import Logo from "../img/logo-black.png";
 import { Link } from "react-router-dom";
-import { GrMenu } from "react-icons/gr";
 export default function Nav() {
   return (
     <nav>
@@ -13,12 +12,6 @@ export default function Nav() {
       </div>
       <div className={classes.menu}>
         <ul>
-          <li className = 'toggle'><GrMenu/>
-            <input
-               type ='checkbox'
-               id = 'check'>
-             </input>
-          </li>
            <li>
             <Link to='/'>Home</Link>
           </li>

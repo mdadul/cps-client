@@ -6,6 +6,7 @@ nav {
   top: 0px;
   background-color: var(--primary);
   padding: 0 2.5rem;
+  z-index: 999;
 }
 .brand {
   display: flex;
@@ -61,15 +62,13 @@ Nav ul {
   nav {
     grid-template-columns: 1fr;
   }
-  .brand {
-    justify-content: center;
-  }
   #check:checked~ .menu ul li:first-child{
     display: block;
     margin: 10px;
   }
   .menu ul{
-    display: flex;
+    display: none;
+    /* display: flex; */
     justify-content: center;
     align-items: center;
     flex-direction: column;
