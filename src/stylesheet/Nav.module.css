@@ -10,8 +10,18 @@ nav {
 }
 .brand {
   display: flex;
+  flex-direction: row;
   align-items: center;
   color: #fff;
+}
+.brand a {
+  text-decoration: none;
+  font-size: 24px;
+  color: var(--white);
+}
+.brand a:hover {
+  color: #fff;
+  opacity: 1;
 }
 .brand img {
   width: 64px;
