@@ -72,18 +72,19 @@ Nav ul {
   nav {
     grid-template-columns: 1fr;
   }
-  #check:checked~ .menu ul li:first-child{
-    display: block;
-    margin: 10px;
-  }
   .menu ul{
-    display: none;
-    /* display: flex; */
-    justify-content: center;
-    align-items: center;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
     flex-direction: column;
     column-gap: 20px;
-    /* position: absolute; */
+    padding: 40px 0 0 20px;
+    position: fixed;
+    top: 75px;
+    right: 0px;
+    width: 300px;
+    height: 100vh;
+    background-color: blueviolet;
   }
   .menu ul li:last-child {
     margin-top: 20px;

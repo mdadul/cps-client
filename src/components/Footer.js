@@ -1,6 +1,6 @@
 import React from "react";
 import classes from "../stylesheet/Footer.module.css";
-import Logo from "../img/logo-white.png";
+import Logo from "../img/logo-color.png";
 import { Link } from "react-router-dom";
 import { AiOutlineCopyrightCircle } from "react-icons/ai";
 import { GoLocation } from "react-icons/go";
@@ -19,10 +19,7 @@ export default function Footer() {
           <div>
             <h3>CHOLO PROGRAMMING SHIKHI</h3>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea
-              assumenda commodi maxime nam voluptas voluptates nesciunt nulla ut
-              dolore expedita eligendi dignissimos debitis, minima fugiat animi
-              reiciendis corporis consectetur neque.
+              We are a leading online learning platform for the world's best programmers. We offer courses in various programming languages, web development and many more
             </p>
           </div>
         </div>
@@ -46,21 +43,32 @@ export default function Footer() {
             </li>
           </ul>
         </div>
+        <div>
+          <h3>Resources </h3>
+          <ul>
+            <li>Bootcamp</li>
+            <li>Career Adda</li>
+            <li>Seminar </li>
+            <li>Programming Contest</li>
+
+
+          </ul>
+        </div>
         <div className={classes.footerContact}>
           <h3>Contact Us</h3>
           <ul>
-            <p><GoLocation/> Mirsharai, Chattogram</p>
-            <p><IoMdCall/> Phone: 01816-848940</p>
-            <p><IoMdCall/> Phone: 01521-564157</p>
-            <p><AiOutlineMail/> Email: info@cps.com</p>
-            <span><FaFacebook/> </span>     
-            <span><BsLinkedin/> </span>
-            <span><BsGithub/></span>
+            <p><GoLocation /> Mirsharai, Chattogram</p>
+            <p><IoMdCall /> Phone: 01816-848940</p>
+            <p><IoMdCall /> Phone: 01521-564157</p>
+            <p><AiOutlineMail /> Email: info@cps.com</p>
+            <span><FaFacebook /> </span>
+            <span><BsLinkedin /> </span>
+            <span><BsGithub /></span>
           </ul>
         </div>
       </div>
       <p className={classes.copyright}>
-        Copyright <AiOutlineCopyrightCircle/> <Link to='/'>Cholo Programming Shikhi.</Link> All rights reserved.
+        Copyright <AiOutlineCopyrightCircle /> <Link to='/'>Cholo Programming Shikhi.</Link> All rights reserved.
       </p>
     </footer>
   );

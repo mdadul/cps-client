@@ -14,6 +14,8 @@ import "../stylesheet/Banner.module.css";
 // import required modules
 import { Keyboard, Pagination, Navigation } from "swiper";
 
+import Illustration from './Illustration';
+
 export default function Banner() {
   return (
     <>
@@ -31,19 +33,26 @@ export default function Banner() {
         className="mySwiper"
       >
         <SwiperSlide>
-          <img src={image} alt="slide"/>
+          <div className="container column">
+            <div>
+              <h1>Welcome To Cholo Programming Shikhi</h1>
+              <p>lorem10</p>
+            </div>
+            <Illustration src={image} />
+            
+          </div>
         </SwiperSlide>
         <SwiperSlide>
-        <img src={image} alt="slide"/>
+          <img src={image} alt="slide" />
         </SwiperSlide>
-        <SwiperSlide><img src={image} alt="slide"/></SwiperSlide>
+        <SwiperSlide><img src={image} alt="slide" /></SwiperSlide>
         <SwiperSlide>
-        <img src={image} alt="slide"/>
+          <img src={image} alt="slide" />
         </SwiperSlide>
-        <SwiperSlide><img src={image} alt="slide"/></SwiperSlide>
-        <SwiperSlide><img src={image} alt="slide"/></SwiperSlide>
-        <SwiperSlide><img src={image} alt="slide"/></SwiperSlide>
-        
+        <SwiperSlide><img src={image} alt="slide" /></SwiperSlide>
+        <SwiperSlide><img src={image} alt="slide" /></SwiperSlide>
+        <SwiperSlide><img src={image} alt="slide" /></SwiperSlide>
+
       </Swiper>
     </>
   );
