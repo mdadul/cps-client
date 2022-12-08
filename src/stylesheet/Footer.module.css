@@ -1,5 +1,5 @@
 footer {
-  background-color: #2e3134;
+  background-color: #023161;
 }
 .footer {
   padding: 30px 10px 10px 50px;
@@ -41,7 +41,7 @@ footer {
 
 .footerContact ul p{
   font-size : 16px;
-  color : var(--gray);
+  color : #fff1f1;
 }
 .copyright {
   background-color: #1e1e1e;

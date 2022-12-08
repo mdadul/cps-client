@@ -7,14 +7,6 @@ export default function Courses() {
     <h1 style={{"text-align":"center" ,"margin":"10px 0"}}>Our Courses</h1>
       <div className={classes.Courses}>
         <Course />
-        <Course />
-        <Course />
-        <Course />
-        <Course />
-        <Course />
-        <Course />
-        <Course />
-        <Course />
       </div>
     </>
   );

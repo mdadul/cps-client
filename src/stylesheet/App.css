@@ -44,7 +44,11 @@ body {
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
 }
-
+a {
+  text-decoration: none;
+  color : white;
+  font-size: 14px;
+}
 @media only screen and (max-width: 1023px) {
   .column {
     grid-template-columns: 1fr;

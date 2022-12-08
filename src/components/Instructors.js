@@ -15,11 +15,6 @@ export default function Instructors() {
   return (
     <div className={classes.instructor}>
      <Instructor/>
-    <Instructor/>
-    <Instructor/>
-    <Instructor/>
-    <Instructor/>
-    <Instructor/>
     </div>
   );
 }

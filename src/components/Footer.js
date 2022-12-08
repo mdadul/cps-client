@@ -53,14 +53,14 @@ export default function Footer() {
             <p><IoMdCall/> Phone: 01816-848940</p>
             <p><IoMdCall/> Phone: 01521-564157</p>
             <p><AiOutlineMail/> Email: info@cps.com</p>
-            <FaFacebook/>     
-            <BsLinkedin/>
-            <BsGithub/>
+            <span><FaFacebook/> </span>     
+            <span><BsLinkedin/> </span>
+            <span><BsGithub/></span>
           </ul>
         </div>
       </div>
       <p className={classes.copyright}>
-        Copyright <AiOutlineCopyrightCircle/> Cholo Programming Shikhi. All rights reserved.
+        Copyright <AiOutlineCopyrightCircle/> <Link to='/'>Cholo Programming Shikhi.</Link> All rights reserved.
       </p>
     </footer>
   );
