@@ -1,4 +1,4 @@
-import classes from '../stylesheet/Illustration.module.css'
+import classes from "../stylesheet/Illustration.module.css";
 export default function Illustration({ src, alt, ...rest }) {
   return (
     <div className={classes.illustration}>
@@ -6,4 +6,3 @@ export default function Illustration({ src, alt, ...rest }) {
     </div>
   );
 }
-

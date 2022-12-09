@@ -3,11 +3,11 @@ import "../../stylesheet/App.css";
 import Illustration from "../Illustration";
 import LoginForm from "../LogInForm";
 import Nav from "../Nav";
-import {useEffect} from 'react';
+import { useEffect } from "react";
 export default function Login() {
   useEffect(() => {
-    document.title = 'Sign In-CPS'
-}, []);
+    document.title = "Sign In-CPS";
+  }, []);
   return (
     <>
       <Nav />

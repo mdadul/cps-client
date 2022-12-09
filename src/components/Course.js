@@ -7,8 +7,16 @@ import { HiUserGroup } from "react-icons/hi";
 import { BsInfoCircle } from "react-icons/bs";
 // import image from '../img/edu1.gif'
 export default function Course(props) {
-  console.log(props.ourCourse)
-  const {image,title,price,totalClass,totalLecture,totalTime,totalStudent} = props.ourCourse;
+  console.log(props.ourCourse);
+  const {
+    image,
+    title,
+    price,
+    totalClass,
+    totalLecture,
+    totalTime,
+    totalStudent,
+  } = props.ourCourse;
 
   return (
     <div className={classes.course}>
@@ -26,14 +34,24 @@ export default function Course(props) {
         <h3>{title}</h3>
       </div>
       <div className={classes.details}>
-        <p><FcGraduationCap/> {totalClass} classes</p>
-        <p><FcSurvey/> {totalLecture} Sheets</p>
-        <p><FcAlarmClock/> {totalTime} Hrs</p>
-        <p><HiUserGroup/> {totalStudent} Students</p>
+        <p>
+          <FcGraduationCap /> {totalClass} classes
+        </p>
+        <p>
+          <FcSurvey /> {totalLecture} Sheets
+        </p>
+        <p>
+          <FcAlarmClock /> {totalTime} Hrs
+        </p>
+        <p>
+          <HiUserGroup /> {totalStudent} Students
+        </p>
       </div>
       <div className={classes.coursebtn}>
         <button>Edit</button>
-        <button>Delete <BsInfoCircle/></button>
+        <button>
+          Delete <BsInfoCircle />
+        </button>
       </div>
     </div>
   );

@@ -3,7 +3,7 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // import image for slide
-import image from '../img/404.gif'
+import image from "../img/404.gif";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
@@ -14,7 +14,7 @@ import "../stylesheet/Banner.module.css";
 // import required modules
 import { Keyboard, Pagination, Navigation } from "swiper";
 
-import Illustration from './Illustration';
+import Illustration from "./Illustration";
 
 export default function Banner() {
   return (
@@ -34,25 +34,31 @@ export default function Banner() {
       >
         <SwiperSlide>
           <div className="container column">
-            <div>
+            <div className="banner">
               <h1>Welcome To Cholo Programming Shikhi</h1>
               <p>lorem10</p>
             </div>
             <Illustration src={image} />
-            
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <img src={image} alt="slide" />
         </SwiperSlide>
-        <SwiperSlide><img src={image} alt="slide" /></SwiperSlide>
         <SwiperSlide>
           <img src={image} alt="slide" />
         </SwiperSlide>
-        <SwiperSlide><img src={image} alt="slide" /></SwiperSlide>
-        <SwiperSlide><img src={image} alt="slide" /></SwiperSlide>
-        <SwiperSlide><img src={image} alt="slide" /></SwiperSlide>
-
+        <SwiperSlide>
+          <img src={image} alt="slide" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src={image} alt="slide" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src={image} alt="slide" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src={image} alt="slide" />
+        </SwiperSlide>
       </Swiper>
     </>
   );

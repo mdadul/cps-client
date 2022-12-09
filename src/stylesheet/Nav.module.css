@@ -67,12 +67,10 @@ Nav ul {
   color: var(--primary);
 }
 @media screen and (max-width: 1024px) {
-  
-  
   nav {
     grid-template-columns: 1fr;
   }
-  .menu ul{
+  .menu ul {
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;

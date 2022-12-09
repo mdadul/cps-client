@@ -39,9 +39,9 @@ footer {
   font-size: 14px;
 }
 
-.footerContact ul p{
-  font-size : 16px;
-  color : #fff1f1;
+.footerContact ul p {
+  font-size: 16px;
+  color: #fff1f1;
 }
 .copyright {
   background-color: #1e1e1e;
@@ -53,7 +53,6 @@ footer {
 @media screen and (max-width: 1024px) {
   .footer {
     grid-template-columns: 1fr;
-    
   }
   .footer-logo {
     flex-direction: column;

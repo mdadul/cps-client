@@ -1,4 +1,3 @@
-
 /* Service Component */
 .Courses {
   display: grid;
@@ -6,12 +5,11 @@
   margin: 0px auto;
   padding: 20px 0px 10px 5%;
   row-gap: 20px;
-  background-image: url('../img/courseBg.svg');
+  background-image: url("../img/courseBg.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
-
 }
 .course:hover {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
@@ -105,7 +103,6 @@
 .coursebtn button:hover {
   transform: scale(1.1);
   transition: all 0.5s ease;
- 
 }
 @media screen and (max-width: 1300px) {
   .Courses {

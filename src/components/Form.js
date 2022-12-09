@@ -7,4 +7,3 @@ export default function Form({ children, className, ...rest }) {
     </form>
   );
 }
-

@@ -3,12 +3,12 @@ import "../../stylesheet/App.css";
 
 import Illustration from "../Illustration";
 import Nav from "../Nav";
-import {useEffect} from 'react';
+import { useEffect } from "react";
 import SignupForm from "../SignUpForm";
 export default function Signup() {
   useEffect(() => {
-    document.title = 'Sign Up-CPS'
-}, []);
+    document.title = "Sign Up-CPS";
+  }, []);
   return (
     <>
       <Nav />

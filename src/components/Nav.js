@@ -6,7 +6,7 @@ export default function Nav() {
   return (
     <nav>
       <div className={classes.brand}>
-        <Link to='/'>
+        <Link to="/">
           <img src={Logo} alt="cps-logo" />
           {/* <h3>CHOLO PROGRAMMING SHIKHI</h3> */}
         </Link>
@@ -14,20 +14,20 @@ export default function Nav() {
       <div className={classes.menu}>
         <ul>
           <li>
-            <Link to='/'>Home</Link>
+            <Link to="/">Home</Link>
           </li>
           <li>
-            <Link to='/courses'>Courses</Link>
+            <Link to="/courses">Courses</Link>
           </li>
           <li>
-            <Link to='/contact'>Contact Us</Link>
+            <Link to="/contact">Contact Us</Link>
           </li>
 
           <li>
-            <Link to='/signup'>Sign Up</Link>
+            <Link to="/signup">Sign Up</Link>
           </li>
           <li>
-            <Link to='/signin'>Sign In</Link>
+            <Link to="/signin">Sign In</Link>
           </li>
         </ul>
       </div>

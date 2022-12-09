@@ -1,16 +1,8 @@
 /* illustration component */
 .illustration {
-    padding: 3rem 2rem;
-  }
-  
-  .illustration img {
-    max-width: 80%;
-  }
-  
-  @media only screen and (max-width: 1023px) {
-    .illustration {
-      display: none;
-    }
-  }
-  
-  
+  padding: 3rem 2rem;
+}
+
+.illustration img {
+  max-width: 80%;
+}
