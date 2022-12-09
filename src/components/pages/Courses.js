@@ -16,7 +16,10 @@ export default function Courses() {
         <Illustration src={education} />
         <CourseForm />
       </div>
-     <div><InstructorAddForm/></div> 
+      <div className="container column">
+        <InstructorAddForm />
+        <Illustration src={education} />
+      </div>
     </>
   );
 }
