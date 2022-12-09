@@ -3,6 +3,7 @@ import CourseForm from "../CourseForm";
 import Nav from "../Nav";
 import Illustration from "../Illustration";
 import education from "../../img/update.svg";
+import add from '../../img/add.png';
 import InstructorAddForm from "../InstrutorAddFrom";
 import { useEffect } from "react";
 export default function Courses() {
@@ -18,7 +19,7 @@ export default function Courses() {
       </div>
       <div className="container column">
         <InstructorAddForm />
-        <Illustration src={education} />
+        <Illustration src={add} />
       </div>
     </>
   );
