@@ -2,7 +2,7 @@ import React from 'react'
 import {useRef} from 'react'
 import Form from './Form'
 
-import TextInput from './TextInput'
+// import TextInput from './TextInput'
 
 export default function CourseForm() {
     const imageRef = useRef();
@@ -14,8 +14,8 @@ export default function CourseForm() {
     const totalStudentRef = useRef();
 
 
-    const handleCourseForm=e=>{
-        e.preventDefault();
+    const handleCourseForm=(e)=>{
+        
 
         const image = imageRef.current.value;
         const title = titleRef.current.value;
@@ -27,8 +27,8 @@ export default function CourseForm() {
 
         const newCourse = {image, title, price, totalClass, totalLecture, totalTime,totalStudent};
 
-        // post couse via API
-        fetch('https://',{
+        // post course via API
+        fetch('https://cps.cyclic.app/courses',{
             method : 'POST',
             headers:{
                 'content-type' : 'application/json'
@@ -37,53 +37,57 @@ export default function CourseForm() {
         })
             .then(res => res.json)
             .then(data=>{
+                console.log(data.insertedId)
                 if(data.insertedId){
                     alert('Successfully added the Course!')
                     e.target.reset();
                 }
+                
             })
+
+            e.preventDefault();
     }
   return (
     <>
        <Form style={{height:"520px"}}
        onSubmit ={handleCourseForm}>
-        <TextInput
+        <input
             type="text"
             placeholder ="Enter Image Link"
             required
             ref = {imageRef}
         />
-        <TextInput
+        <input
             type="text"
             placeholder ="Enter Course Title"
             required
             ref={titleRef}
         />
-        <TextInput
+        <input
             type="text"
             placeholder ="Enter Course Price"
             required
             ref={priceRef}
         />
-        <TextInput
+        <input
             type="text"
             placeholder ="Enter Total Classes"
             required
             ref = {totalClassRef}
         />
-        <TextInput
+        <input
             type="text"
             placeholder ="Enter Total Lecture Sheet"
             required
             ref ={totalLectureRef}
         />
-        <TextInput
+        <input
             type="text"
             placeholder ="Enter Total Time to finish"
             required
             ref = {totalTimeRef}
         />
-        <TextInput
+        <input
             type="text"
             placeholder ="Enter Total Enrolled Student"
             required
