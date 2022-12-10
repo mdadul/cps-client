@@ -1,10 +1,20 @@
 import React from "react";
 import { useRef } from "react";
 import Form from "./Form";
+import classes from "../stylesheet/TextInput.module.css";
 
-// import TextInput from './TextInput'
+//  icon import from react icons
+import {
+  FcAddImage,
+  FcAddDatabase,
+  FcCurrencyExchange,
+  FcSurvey,
+  FcInspection,
+  FcDisplay,
+  FcPodiumWithSpeaker,
+} from "react-icons/fc";
 
-export default function CourseForm() {
+export default function CourseForm({ title, btnTitle, icon }) {
   const imageRef = useRef();
   const titleRef = useRef();
   const priceRef = useRef();
@@ -54,49 +64,89 @@ export default function CourseForm() {
   return (
     <>
       <Form style={{ height: "520px" }} onSubmit={handleCourseForm}>
-        <input
-          type="text"
-          placeholder="Enter Image Link"
-          required
-          ref={imageRef}
-        />
-        <input
-          type="text"
-          placeholder="Enter Course Title"
-          required
-          ref={titleRef}
-        />
-        <input
-          type="text"
-          placeholder="Enter Course Price"
-          required
-          ref={priceRef}
-        />
-        <input
-          type="text"
-          placeholder="Enter Total Classes"
-          required
-          ref={totalClassRef}
-        />
-        <input
-          type="text"
-          placeholder="Enter Total Lecture Sheet"
-          required
-          ref={totalLectureRef}
-        />
-        <input
-          type="text"
-          placeholder="Enter Total Time to finish"
-          required
-          ref={totalTimeRef}
-        />
-        <input
-          type="text"
-          placeholder="Enter Total Enrolled Student"
-          required
-          ref={totalStudentRef}
-        />
-        <button type="submit">ADD Course</button>
+        <h2>{title}</h2>
+        <div className={classes.textInput}>
+          <input
+            type="text"
+            placeholder="Enter Image Link"
+            required
+            ref={imageRef}
+          />
+          <h2>
+            <FcAddImage />
+          </h2>
+        </div>
+        <div className={classes.textInput}>
+          <input
+            type="text"
+            placeholder="Enter Course Title"
+            required
+            ref={titleRef}
+          />
+          <h2>
+            <FcAddDatabase />
+          </h2>
+        </div>
+        <div className={classes.textInput}>
+          <input
+            type="text"
+            placeholder="Enter Course Price"
+            required
+            ref={priceRef}
+          />
+          <h2>
+            <FcCurrencyExchange />
+          </h2>
+        </div>
+        <div className={classes.textInput}>
+          <input
+            type="text"
+            placeholder="Enter Total Classes"
+            required
+            ref={totalClassRef}
+          />
+          <h2>
+            <FcSurvey />
+          </h2>
+        </div>
+        <div className={classes.textInput}>
+          <input
+            type="text"
+            placeholder="Enter Total Lecture Sheet"
+            required
+            ref={totalLectureRef}
+          />
+          <h2>
+            <FcInspection />
+          </h2>
+        </div>
+        <div className={classes.textInput}>
+          <input
+            type="text"
+            placeholder="Enter Total Time to finish"
+            required
+            ref={totalTimeRef}
+          />
+          <h2>
+            <FcDisplay />
+          </h2>
+        </div>
+        <div className={classes.textInput}>
+          <input
+            type="text"
+            placeholder="Enter Total Enrolled Student"
+            required
+            ref={totalStudentRef}
+          />
+          <h2>
+            <FcPodiumWithSpeaker />
+          </h2>
+        </div>
+
+        <button type="submit">
+          {btnTitle}
+          {icon}
+        </button>
       </Form>
     </>
   );

@@ -6,6 +6,8 @@ import education from "../../img/update.svg";
 import add from '../../img/add.png';
 import InstructorAddForm from "../InstrutorAddFrom";
 import { useEffect } from "react";
+import { IoMdAdd } from "react-icons/io";
+
 export default function Courses() {
   useEffect(() => {
     document.title = "Add Course-CPS";
@@ -15,7 +17,7 @@ export default function Courses() {
       <Nav />
       <div className="container column">
         <Illustration src={education} />
-        <CourseForm />
+        <CourseForm title="Add New Course" btnTitle ="Add Course" icon={<IoMdAdd/>}/>
       </div>
       <div className="container column">
         <InstructorAddForm />
