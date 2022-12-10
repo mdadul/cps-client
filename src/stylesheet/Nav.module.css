@@ -71,7 +71,8 @@ Nav ul {
     grid-template-columns: 1fr;
   }
   .menu ul {
-    display: flex;
+    display: none;
+    /* display: flex; */
     justify-content: flex-start;
     align-items: flex-start;
     flex-direction: column;
