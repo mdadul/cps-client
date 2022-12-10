@@ -2,6 +2,7 @@ import React from "react";
 import { useRef } from "react";
 import Form from "./Form";
 import classes from "../stylesheet/TextInput.module.css";
+// icon from react icon
 import { FcAddImage } from "react-icons/fc";
 import { BiRename } from "react-icons/bi";
 import { SiDesignernews } from "react-icons/si";
