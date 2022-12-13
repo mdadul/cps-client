@@ -4,10 +4,10 @@ import { FcGraduationCap } from "react-icons/fc";
 import { FcSurvey } from "react-icons/fc";
 import { FcAlarmClock } from "react-icons/fc";
 import { HiUserGroup } from "react-icons/hi";
-import { BsInfoCircle } from "react-icons/bs";
+import { AiTwotoneDelete } from "react-icons/ai";
 // import image from '../img/edu1.gif'
 export default function Course(props) {
-  console.log(props.ourCourse);
+  // console.log(props.ourCourse);
   const {
     image,
     title,
@@ -17,7 +17,6 @@ export default function Course(props) {
     totalTime,
     totalStudent,
   } = props.ourCourse;
-
   return (
     <div className={classes.course}>
       <img src={image} alt="course-banner" />
@@ -50,7 +49,7 @@ export default function Course(props) {
       <div className={classes.coursebtn}>
         <button>Edit</button>
         <button>
-          Delete <BsInfoCircle />
+          Delete <AiTwotoneDelete />
         </button>
       </div>
     </div>

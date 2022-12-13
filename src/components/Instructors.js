@@ -13,14 +13,12 @@ export default function Instructors() {
 
   return (
     <>
-    <h1 style={{ "text-align": "center", margin: "10px 0" }}>Members</h1>
-    <div className={classes.instructor}>
-      {
-         instructors.map((instructor)=>(
-          <Instructor ourInstrutors={instructor}/>
-        ))
-      }
-    </div>
+      <h1 style={{ "text-align": "center", margin: "10px 0" }}>Members</h1>
+      <div className={classes.instructor}>
+        {instructors.map((instructor) => (
+          <Instructor ourInstrutors={instructor} />
+        ))}
+      </div>
     </>
   );
 }

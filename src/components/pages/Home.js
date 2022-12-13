@@ -5,6 +5,7 @@ import Footer from "../Footer";
 import Instructors from "../Instructors";
 import { useEffect } from "react";
 import Banner from "../Banner";
+import Modal from "../Modal";
 export default function Home() {
   useEffect(() => {
     document.title = "Cholo Programming Shikhi -CPS";
@@ -18,6 +19,7 @@ export default function Home() {
     <>
       <Nav />
       <Banner />
+      <Modal />;
       <Courses />
       <Instructors />
       <Footer />

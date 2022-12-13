@@ -1,0 +1,17 @@
+.modal {
+  display: none;
+  position: fixed;
+  top: 110px;
+  left: 10%;
+  width: 80vw;
+  background-color: white;
+  border: 2px solid blue;
+  z-index: 99999;
+  padding: 15px;
+  border-radius: 15px;
+}
+.modal h1 {
+  text-align: end;
+  color: red;
+  cursor: pointer;
+}

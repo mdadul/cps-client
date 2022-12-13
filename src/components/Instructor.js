@@ -6,7 +6,8 @@ import { BsGithub, BsLinkedin } from "react-icons/bs";
 // import { Link } from 'react-router-dom'
 
 export default function Instructor(props) {
-  const [image, name, designation, institution] = props.ourInstrutors;
+  const { image, name, designation, institution } = props.ourInstrutors;
+  console.log(props.ourInstrutors);
   return (
     <div className={classes.card}>
       <img src={image} alt="member-avater" style={{ width: "100%" }} />
