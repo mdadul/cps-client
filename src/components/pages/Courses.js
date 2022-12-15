@@ -8,7 +8,7 @@ import add from "../../img/add.png";
 import InstructorAddForm from "../InstrutorAddFrom";
 import { useEffect } from "react";
 import { IoMdAdd } from "react-icons/io";
-import Modal from "../Modal";
+// import Modal from "../Modal";
 export default function Courses() {
   useEffect(() => {
     document.title = "Add Course-CPS";
@@ -16,7 +16,7 @@ export default function Courses() {
   return (
     <>
       <Nav />
-      <Modal />;
+      {/* <Modal />; */}
       <Coursess />
       <div className="container column">
         <Illustration src={education} />
