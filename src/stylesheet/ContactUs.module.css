@@ -2,6 +2,7 @@
 .contactForm {
   margin-top: 120px;
 }
+
 .contactHead p:first-child {
   color: blue;
   font-weight: bold;
@@ -31,7 +32,7 @@
   gap: 20px;
 }
 .iconBox {
-  background-color: #190656;
+  background: linear-gradient(to right, rgb(0, 180, 219), rgb(0, 131, 176));
   color: white;
   padding: 15px 10px;
   width: 64px;
@@ -39,9 +40,36 @@
   text-align: center;
   border-radius: 15px;
 }
+.contactForm form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: linear-gradient(to right, rgb(43, 88, 118), rgb(78, 67, 118));
+  padding: 30px 10px;
+  border-radius: 10px;
+}
 
+.contactForm input,
 textarea {
+  height: 50px;
+  padding: 0.3rem 0.7rem;
   background-color: #fff;
-  border-radius: 5px;
-  border: 1px solid #e5e5e5;
+
+  font-size: 16px;
+  font-weight: 500;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+}
+textarea {
+  height: 200px;
+}
+.contactForm button {
+  background: linear-gradient(to right, rgb(253, 200, 48), rgb(243, 115, 53));
+  border-radius: 10px;
+}
+@media screen and (max-width: 1024px) {
+  .contactForm {
+    margin: 40px 0px;
+  }
 }

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import Nav from "../Nav";
 import "../../stylesheet/App.css";
 import classes from "../../stylesheet/ContactUs.module.css";
@@ -7,16 +7,40 @@ import { BiHome } from "react-icons/bi";
 import { FiPhoneCall } from "react-icons/fi";
 import { AiOutlineMail } from "react-icons/ai";
 
+// for email js
+import emailjs from "@emailjs/browser";
+
 // customize icon
 import { IconContext } from "react-icons";
 
-import Form from "../Form";
-import TextInput from "../TextInput";
+// import Form from "../Form";
+// import TextInput from "../TextInput";
 
 export default function Contact() {
+  const form = useRef();
+
   useEffect(() => {
     document.title = "Contact Us -CPS";
   }, []);
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        process.env.REACT_APP_SERVICE_ID,
+        process.env.REACT_APP_TEMPLATE_ID,
+        form.current,
+        process.env.REACT_APP_PUBLIC_KEY
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
   return (
     <>
       <Nav />
@@ -50,7 +74,7 @@ export default function Contact() {
               <div>
                 <h2>Phone Number</h2>
                 <p>+880 1816-848940</p>
-                <p>+880 1816-848940</p>
+                <p>+880 1521-564157</p>
               </div>
             </div>
             <div className={classes.location}>
@@ -67,14 +91,23 @@ export default function Contact() {
           </div>
         </div>
         <div className={classes.contactForm}>
-          <Form style={{ height: "390px" }}>
-            <TextInput type="text" placeholder="Enter Name" required />
+          <form style={{ height: "390px" }} ref={form} onSubmit={sendEmail}>
+            <input
+              type="text"
+              placeholder="Enter Name"
+              required
+              name="user_name"
+            />
 
-            <TextInput type="email" placeholder="Enter Email" required />
-
-            <textarea rows="30" placeholder="Your Message"></textarea>
-            <button type="submit"> Send Message</button>
-          </Form>
+            <input
+              type="email"
+              placeholder="Enter Email"
+              required
+              name="user_email"
+            />
+            <textarea rows="10" placeholder="Your Message"></textarea>
+            <button type="submit">Send Message</button>
+          </form>
         </div>
       </div>
     </>
