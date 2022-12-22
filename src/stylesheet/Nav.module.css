@@ -5,14 +5,18 @@ nav {
   position: sticky;
   top: 0px;
   background-color: var(--primary);
-  padding: 0 2.5rem;
+  padding: 0 2rem;
   z-index: 999;
 }
 .brand {
   display: flex;
-  flex-direction: row;
   align-items: center;
+  justify-content: space-between;
   color: #fff;
+}
+.brandTitle {
+  display: flex;
+  align-items: center;
 }
 .brand a {
   text-decoration: none;
@@ -66,9 +70,22 @@ Nav ul {
   background-color: #fff;
   color: var(--primary);
 }
+.toggle {
+  display: none;
+  cursor: pointer;
+}
 @media screen and (max-width: 1024px) {
+  .toggle {
+    display: block;
+  }
   nav {
     grid-template-columns: 1fr;
+  }
+  .brand a {
+    font-size: 14px;
+  }
+  .brand img {
+    width: 48px;
   }
   .menu ul {
     display: none;
@@ -76,12 +93,11 @@ Nav ul {
     justify-content: flex-start;
     align-items: flex-start;
     flex-direction: column;
-    column-gap: 20px;
     padding: 40px 0 0 20px;
     position: fixed;
-    top: 75px;
-    right: 0px;
-    width: 300px;
+    top: 53px;
+    right: -10px;
+    width: 250px;
     height: 100vh;
     background-color: blueviolet;
   }

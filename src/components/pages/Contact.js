@@ -88,6 +88,25 @@ export default function Contact() {
                 <p>info@cps.com</p>
               </div>
             </div>
+            <div>
+              <h2> Our Developers</h2>
+              <div
+                class="badge-base LI-profile-badge"
+                data-locale="en_US"
+                data-size="medium"
+                data-theme="light"
+                data-type="VERTICAL"
+                data-vanity="emdadulislam"
+                data-version="v1"
+              ></div>
+
+              <a
+                class="badge-base__link LI-simple-link"
+                href="https://bd.linkedin.com/in/emdadulislam?trk=profile-badge"
+              >
+                EMDADUL ISLAM
+              </a>
+            </div>
           </div>
         </div>
         <div className={classes.contactForm}>

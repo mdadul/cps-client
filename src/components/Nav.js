@@ -2,13 +2,16 @@ import React from "react";
 import classes from "../stylesheet/Nav.module.css";
 import Logo from "../img/logo-black.png";
 import { Link } from "react-router-dom";
+
 export default function Nav() {
   return (
     <nav>
       <div className={classes.brand}>
         <Link to="/">
-          <img src={Logo} alt="cps-logo" />
-          {/* <h3>CHOLO PROGRAMMING SHIKHI</h3> */}
+          <div className={classes.brandTitle}>
+            <img src={Logo} alt="cps-logo" />
+            <h3>CHOLO PROGRAMMING SHIKHI</h3>
+          </div>
         </Link>
       </div>
       <div className={classes.menu}>
