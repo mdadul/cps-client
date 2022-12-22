@@ -3,13 +3,13 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // import image for slide
-import image from "../img/404.gif";
+import image from "../img/programming.gif";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
-import "../stylesheet/Banner.module.css";
+import classes from "../stylesheet/Banner.module.css";
 
 // import required modules
 import { Keyboard, Pagination, Navigation } from "swiper";
@@ -28,36 +28,55 @@ export default function Banner() {
         pagination={{
           clickable: true,
         }}
-        navigation={true}
+        navigation={false}
         modules={[Keyboard, Pagination, Navigation]}
-        className="mySwiper"
+        className={classes.mySwiper}
       >
         <SwiperSlide>
-          <div className="container column">
-            <div className="banner">
-              <h1>Welcome To Cholo Programming Shikhi</h1>
-              <p>lorem10</p>
+          <div className="container column ">
+            <div className={classes.banner}>
+              <h3>Welcome To</h3>
+              <h1>Cholo Programming Shikhi</h1>
+              <p>
+                We are a leading online learning platform for the world's best
+                programmers. We offer courses in various programming languages,
+                web development and many more.
+              </p>
+              <button> Get Started </button>
+            </div>
+            <Illustration src={image} />
+          </div>
+        </SwiperSlide>
+
+        <SwiperSlide>
+          <div className="container column ">
+            <div className={classes.banner}>
+              <h3>Welcome To</h3>
+              <h1>Cholo Programming Shikhi</h1>
+              <p>
+                We are a leading online learning platform for the world's best
+                programmers. We offer courses in various programming languages,
+                web development and many more.
+              </p>
+              <button> Get Started </button>
             </div>
             <Illustration src={image} />
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <img src={image} alt="slide" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={image} alt="slide" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={image} alt="slide" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={image} alt="slide" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={image} alt="slide" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={image} alt="slide" />
+          <div className="container column ">
+            <div className={classes.banner}>
+              <h3>Welcome To</h3>
+              <h1>Cholo Programming Shikhi</h1>
+              <p>
+                We are a leading online learning platform for the world's best
+                programmers. We offer courses in various programming languages,
+                web development and many more.
+              </p>
+              <button> Get Started </button>
+            </div>
+            <Illustration src={image} />
+          </div>
         </SwiperSlide>
       </Swiper>
     </>

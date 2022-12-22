@@ -9,6 +9,7 @@ import Modal from "../Modal";
 import CourseForm from "../CourseForm";
 export default function Home() {
   const [show, setShow] = useState(false);
+
   const handleToggle = () => {
     setShow(!show);
   };
