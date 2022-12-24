@@ -51,12 +51,10 @@ export default function Banner() {
         <SwiperSlide>
           <div className="container column ">
             <div className={classes.banner}>
-              <h3>Welcome To</h3>
-              <h1>Cholo Programming Shikhi</h1>
+              <h1>Teach Anything to anyone from anywhere</h1>
               <p>
-                We are a leading online learning platform for the world's best
-                programmers. We offer courses in various programming languages,
-                web development and many more.
+                Help students take control of their learning and master each new
+                concept.
               </p>
               <button> Get Started </button>
             </div>
@@ -66,14 +64,13 @@ export default function Banner() {
         <SwiperSlide>
           <div className="container column ">
             <div className={classes.banner}>
-              <h3>Welcome To</h3>
-              <h1>Cholo Programming Shikhi</h1>
+              <h1>On Demand Mentorship for aspiring creatives</h1>
               <p>
-                We are a leading online learning platform for the world's best
-                programmers. We offer courses in various programming languages,
-                web development and many more.
+                Find the perfect mentor to help you launch your creative career.
+                Easily scheduled vedio chats with out community of experts to
+                get help with Design, Coding,UX and more.
               </p>
-              <button> Get Started </button>
+              <button> Find Your Mentor </button>
             </div>
             <Illustration src={image} />
           </div>
