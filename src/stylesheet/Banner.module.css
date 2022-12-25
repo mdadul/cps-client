@@ -1,16 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Vinyl&family=Sacramento&display=swap");
 .swiper {
   width: 100%;
   height: 100%;
 }
 .mySwiper {
   height: 85vh;
-  background: rgb(25, 6, 86);
   background: linear-gradient(
-    257deg,
-    rgba(25, 6, 86, 1) 9%,
-    rgba(45, 11, 157, 1) 52%,
-    rgba(25, 6, 86, 1) 94%
-  );
+      125deg,
+      #00ff57 0%,
+      #010033 40%,
+      #460043 70%,
+      #f0ffc5 100%
+    ),
+    linear-gradient(55deg, #0014c9 0%, #410060 100%),
+    linear-gradient(300deg, #ffc700 0%, #001aff 100%),
+    radial-gradient(
+      135% 215% at 115% 40%,
+      #393939 0%,
+      #393939 40%,
+      #849561 calc(40% + 1px),
+      #849561 60%,
+      #eed690 calc(60% + 1px),
+      #eed690 80%,
+      #ecefd8 calc(80% + 1px),
+      #ecefd8 100%
+    ),
+    linear-gradient(
+      125deg,
+      #282d4f 0%,
+      #282d4f 40%,
+      #23103a calc(40% + 1px),
+      #23103a 70%,
+      #a0204c calc(70% + 1px),
+      #a0204c 88%,
+      #ff6c00 calc(88% + 1px),
+      #ff6c00 100%
+    );
+  background-blend-mode: overlay, screen, overlay, overlay, normal;
 }
 .swiper-slide {
   text-align: center;
@@ -38,14 +64,14 @@
   justify-content: center;
 }
 .banner h3 {
-  color: var(--white);
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  font-size: 20px;
+  color: #fff1f1;
+  font-family: "Sacramento", cursive;
+  font-size: 24px;
 }
 .banner h1 {
-  color: #ffd100;
+  color: white;
   font-size: 3rem;
+  font-family: "Rubik Vinyl", cursive;
 }
 .banner p {
   color: white;
@@ -56,8 +82,8 @@
   max-width: 200px;
   margin-top: 50px;
   border-radius: 10px;
-  color: var(--primary);
-  background-color: var(--white);
+  color: #ffffff;
+  background-color: #1e1e1e;
 }
 @media only screen and (max-width: 1023px) {
   .mySwiper {
