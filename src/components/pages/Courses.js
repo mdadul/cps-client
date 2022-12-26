@@ -11,7 +11,6 @@ export default function Courses() {
     <>
       <Nav />
       <Coursess />
-    
     </>
   );
 }

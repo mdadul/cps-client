@@ -5,16 +5,10 @@ import { FcSurvey } from "react-icons/fc";
 import { FcAlarmClock } from "react-icons/fc";
 import { HiUserGroup } from "react-icons/hi";
 import { AiTwotoneDelete } from "react-icons/ai";
-
+import { Link } from "react-router-dom";
 import Modal from "./Modal";
 import CourseForm from "./CourseForm";
-// import image from '../img/edu1.gif'
 export default function Course(props) {
-  const [show, setShow] = useState(false);
-
-  const handleToggle = () => {
-    setShow(!show);
-  };
   const {
     _id,
     image,
@@ -28,14 +22,6 @@ export default function Course(props) {
   const { handleDeleteCourse } = props;
   return (
     <>
-      {show && (
-        <Modal>
-          <CourseForm title="Edit Course" btnTitle="Edit Course" />
-          <button onClick={handleToggle}>Close </button>
-        </Modal>
-      )}
-
-
       <div className={classes.course}>
         <img src={image} alt="course-banner" />
         <div className={classes.type}>
@@ -65,8 +51,13 @@ export default function Course(props) {
           </p>
         </div>
         <div className={classes.coursebtn}>
-          <button onClick={handleToggle}>Edit</button>
-          <button onClick={() => handleDeleteCourse(_id)}>Delete <AiTwotoneDelete /></button>
+          <button onClick={() => handleDeleteCourse(_id)}>
+            Delete <AiTwotoneDelete />
+          </button>
+          <Link to="/updatecourse/{_id}">
+            {" "}
+            <button>Edit</button>
+          </Link>
         </div>
       </div>
     </>

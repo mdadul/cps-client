@@ -41,7 +41,7 @@ export default function InstructorAddForm() {
 
     // post couse via API
     // fetch("https://cps.cyclic.app/instructors", {
-      fetch("http://localhost:5000/instructors", {
+    fetch("http://localhost:5000/instructors", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -51,7 +51,8 @@ export default function InstructorAddForm() {
       .then((res) => res.json())
       .then((data) => {
         if (data.insertedId) {
-          alert("Successfully added the Instructor!");
+          alert("Successfully added the member!");
+
           e.target.reset();
         }
       });
