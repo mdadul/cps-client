@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import Nav from "../Nav";
+import Footer from "../Footer";
 import "../../stylesheet/App.css";
 import classes from "../../stylesheet/ContactUs.module.css";
 import { useEffect } from "react";
@@ -129,6 +130,8 @@ export default function Contact() {
           </form>
         </div>
       </div>
+
+      <Footer />
     </>
   );
 }

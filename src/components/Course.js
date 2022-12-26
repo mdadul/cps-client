@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import classes from "../stylesheet/Course.module.css";
 import { FcGraduationCap } from "react-icons/fc";
 import { FcSurvey } from "react-icons/fc";
@@ -6,8 +6,7 @@ import { FcAlarmClock } from "react-icons/fc";
 import { HiUserGroup } from "react-icons/hi";
 import { AiTwotoneDelete } from "react-icons/ai";
 import { Link } from "react-router-dom";
-import Modal from "./Modal";
-import CourseForm from "./CourseForm";
+
 export default function Course(props) {
   const {
     _id,
@@ -51,13 +50,13 @@ export default function Course(props) {
           </p>
         </div>
         <div className={classes.coursebtn}>
-          <button onClick={() => handleDeleteCourse(_id)}>
-            Delete <AiTwotoneDelete />
-          </button>
           <Link to="/updatecourse/{_id}">
             {" "}
             <button>Edit</button>
           </Link>
+          <button onClick={() => handleDeleteCourse(_id)}>
+            Delete <AiTwotoneDelete />
+          </button>
         </div>
       </div>
     </>
