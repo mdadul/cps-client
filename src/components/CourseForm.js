@@ -14,7 +14,7 @@ import {
   FcPodiumWithSpeaker,
 } from "react-icons/fc";
 
-export default function CourseForm({ title, btnTitle, icon }) {
+export default function CourseForm() {
   const imageRef = useRef();
   const titleRef = useRef();
   const priceRef = useRef();
@@ -24,6 +24,7 @@ export default function CourseForm({ title, btnTitle, icon }) {
   const totalStudentRef = useRef();
 
   const handleCourseForm = (e) => {
+    e.preventDefault();
     const image = imageRef.current.value;
     const title = titleRef.current.value;
     const price = priceRef.current.value;
@@ -50,21 +51,18 @@ export default function CourseForm({ title, btnTitle, icon }) {
       },
       body: JSON.stringify(newCourse),
     })
-      .then((res) => res.json)
+      .then((res) => res.json())
       .then((data) => {
-        console.log(data.insertedId);
         if (data.insertedId) {
           alert("Successfully added the Course!");
           e.target.reset();
         }
       });
-
-    e.preventDefault();
   };
   return (
     <>
       <Form style={{ height: "520px" }} onSubmit={handleCourseForm}>
-        <h2>{title}</h2>
+        <h2>Add New Course</h2>
         <div className={classes.textInput}>
           <input
             type="text"
@@ -143,10 +141,7 @@ export default function CourseForm({ title, btnTitle, icon }) {
           </h2>
         </div>
 
-        <button type="submit">
-          {btnTitle}
-          {icon}
-        </button>
+        <button type="submit">Add Course</button>
       </Form>
     </>
   );

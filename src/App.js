@@ -3,6 +3,8 @@ import Home from "./components/pages/Home";
 // import Login from "./components/pages/SignIn";
 import ContactUs from "./components/pages/Contact";
 import Courses from "./components/pages/Courses";
+import UpdateCourseForm from "./components/UpdateCourseForm";
+
 import "./stylesheet/App.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Banner from "./components/Banner";
@@ -20,6 +22,7 @@ function App() {
         <Route exact path="/signin" element={<Login />} /> */}
         <Route exact path="/contact" element={<ContactUs />} />
         <Route exact path="/courses" element={<Courses />} />
+        <Route exact path="/updatecourse/:id" element={<UpdateCourseForm />} />
         <Route path="*" element={<h1>404 Not Found</h1>} />
       </Routes>
     </Router>
