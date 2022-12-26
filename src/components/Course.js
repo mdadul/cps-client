@@ -16,6 +16,7 @@ export default function Course(props) {
     setShow(!show);
   };
   const {
+    _id,
     image,
     title,
     price,
@@ -24,6 +25,7 @@ export default function Course(props) {
     totalTime,
     totalStudent,
   } = props.ourCourse;
+  const { handleDeleteCourse } = props;
   return (
     <>
       {show && (
@@ -32,6 +34,7 @@ export default function Course(props) {
           <button onClick={handleToggle}>Close </button>
         </Modal>
       )}
+
 
       <div className={classes.course}>
         <img src={image} alt="course-banner" />
@@ -63,9 +66,7 @@ export default function Course(props) {
         </div>
         <div className={classes.coursebtn}>
           <button onClick={handleToggle}>Edit</button>
-          <button>
-            Delete <AiTwotoneDelete />
-          </button>
+          <button onClick={() => handleDeleteCourse(_id)}>Delete <AiTwotoneDelete /></button>
         </div>
       </div>
     </>
