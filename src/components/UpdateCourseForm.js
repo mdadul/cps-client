@@ -64,6 +64,7 @@ export default function UpdateCourseForm() {
           alert("Successfully Updated");
           setCourse({});
         }
+        
       });
     e.preventDefault();
   };
