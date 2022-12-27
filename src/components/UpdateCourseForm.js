@@ -2,7 +2,8 @@ import React, { useState, useEffect } from "react";
 import Form from "./Form";
 import classes from "../stylesheet/TextInput.module.css";
 import { useParams } from "react-router-dom";
-
+import update from "../img/update.svg";
+import Illustration from "./Illustration";
 //  icon import from react icons
 import {
   FcAddImage,
@@ -22,13 +23,13 @@ export default function UpdateCourseForm() {
   const [totalSheet, setTotalSheet] = useState("");
   const [totalHours, setTotalHours] = useState("");
   const [totalStudent, setTotalStudent] = useState("");
-  
+
   const { statusId } = useParams();
   console.log(statusId);
 
   const [course, setCourse] = useState({});
-  const url = `https://guarded-tundra-04860.herokuapp.com/orders/${statusId}`;
-  console.log(url);
+  const url = `http://localhost:5000/instructors/${statusId}`;
+  // console.log(url);
   useEffect(() => {
     fetch(url)
       .then((res) => res.json())
@@ -38,7 +39,17 @@ export default function UpdateCourseForm() {
   }, []);
 
   const handleUpdateStatus = (e) => {
-    const url = `https://guarded-tundra-04860.herokuapp.com/orders/${statusId}`;
+    setCourse({
+      image,
+      title,
+      price,
+      totalClass,
+      totalSheet,
+      totalHours,
+      totalStudent,
+    });
+
+    const url = `http://localhost:5000/instructors/${statusId}`;
     console.log(url);
     fetch(url, {
       method: "PUT",
@@ -59,79 +70,100 @@ export default function UpdateCourseForm() {
 
   return (
     <>
-      <Form style={{ height: "520px" }} onSubmit={handleUpdateStatus}>
-        <h2>Update Course</h2>
-        <h1>Id {statusId}</h1>
-        <div className={classes.textInput}>
-          <input type="text" placeholder="Enter Image Link" 
-          onChange={(e)=>setImage(e.target.value)}
-          value = {course.image || ' '} 
-          required />
-          <h2>
-            <FcAddImage />
-          </h2>
-        </div>
-        <div className={classes.textInput}>
-          <input type="text" placeholder="Enter Course Title" required 
-          onChange={(e)=>setTitle(e.target.value)}
-          value = {course.title || ' '} 
-          />
-          <h2>
-            <FcAddDatabase />
-          </h2>
-        </div>
-        <div className={classes.textInput}>
-          <input type="text" placeholder="Enter Course Price" required 
-          onChange={(e)=>setPrice(e.target.value)}
-          value = {course.price || ' '} />
-          <h2>
-            <FcCurrencyExchange />
-          </h2>
-        </div>
-        <div className={classes.textInput}>
-          <input type="text" placeholder="Enter Total Classes" 
-           onChange={(e)=>setTotalClass(e.target.value)}
-          value = {course.totalClass || ' '}
-          required />
-          <h2>
-            <FcSurvey />
-          </h2>
-        </div>
-        <div className={classes.textInput}>
-          <input type="text" placeholder="Enter Total Lecture Sheet" required 
-           onChange={(e)=>setTotalSheet(e.target.value)}
-          value = {course.totalSheet || ' '}/>
-          <h2>
-            <FcInspection />
-          </h2>
-        </div>
-        <div className={classes.textInput}>
-          <input
-            type="text"
-            placeholder="Enter Total Time to finish"
-            required
-             onChange={(e)=>setTotalHours(e.target.value)}
-          value = {course.totalHours || ' '}
-          />
-          <h2>
-            <FcDisplay />
-          </h2>
-        </div>
-        <div className={classes.textInput}>
-          <input
-            type="text"
-            placeholder="Enter Total Enrolled Student"
-             onChange={(e)=>setTotalStudent(e.target.value)}
-          value = {course.totalStudent || ' '}
-            required
-          />
-          <h2>
-            <FcPodiumWithSpeaker />
-          </h2>
-        </div>
+      <div className="container column">
+        <Illustration src={update} />
 
-        <button type="submit">Update Course</button>
-      </Form>
+        <Form style={{ height: "520px" }} onSubmit={handleUpdateStatus}>
+          <h2>Update Course</h2>
+          <h1>Id {statusId}</h1>
+          <div className={classes.textInput}>
+            <input
+              type="text"
+              placeholder="Enter Image Link"
+              onChange={(e) => setImage(e.target.value)}
+              value={course.image || " "}
+              required
+            />
+            <h2>
+              <FcAddImage />
+            </h2>
+          </div>
+          <div className={classes.textInput}>
+            <input
+              type="text"
+              placeholder="Enter Course Title"
+              required
+              onChange={(e) => setTitle(e.target.value)}
+              value={course.title || " "}
+            />
+            <h2>
+              <FcAddDatabase />
+            </h2>
+          </div>
+          <div className={classes.textInput}>
+            <input
+              type="text"
+              placeholder="Enter Course Price"
+              required
+              onChange={(e) => setPrice(e.target.value)}
+              value={course.price || " "}
+            />
+            <h2>
+              <FcCurrencyExchange />
+            </h2>
+          </div>
+          <div className={classes.textInput}>
+            <input
+              type="text"
+              placeholder="Enter Total Classes"
+              onChange={(e) => setTotalClass(e.target.value)}
+              value={course.totalClass || " "}
+              required
+            />
+            <h2>
+              <FcSurvey />
+            </h2>
+          </div>
+          <div className={classes.textInput}>
+            <input
+              type="text"
+              placeholder="Enter Total Lecture Sheet"
+              required
+              onChange={(e) => setTotalSheet(e.target.value)}
+              value={course.totalSheet || " "}
+            />
+            <h2>
+              <FcInspection />
+            </h2>
+          </div>
+          <div className={classes.textInput}>
+            <input
+              type="text"
+              placeholder="Enter Total Time to finish"
+              required
+              onChange={(e) => setTotalHours(e.target.value)}
+              value={course.totalHours || " "}
+            />
+            <h2>
+              <FcDisplay />
+            </h2>
+          </div>
+          <div className={classes.textInput}>
+            <input
+              type="text"
+              placeholder="Enter Total Enrolled Student"
+              onChange={(e) => setTotalStudent(e.target.value)}
+              value={course.totalStudent || " "}
+              required
+            />
+            <h2>
+              <FcPodiumWithSpeaker />
+            </h2>
+          </div>
+
+          <button type="submit">Update Course</button>
+        </Form>
+      </div>
     </>
   );
 }

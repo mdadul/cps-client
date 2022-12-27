@@ -7,7 +7,7 @@ import UpdateCourseForm from "./components/UpdateCourseForm";
 
 import "./stylesheet/App.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Banner from "./components/Banner";
+import Banners from "./components/pages/Banners";
 import AddCourse from "./components/pages/AddCourse";
 import AddMember from "./components/pages/AddMember";
 function App() {
@@ -15,7 +15,7 @@ function App() {
     <Router>
       <Routes>
         <Route exact path="/" element={<Home />} />
-        <Route exact path="/banner" element={<Banner />} />
+        <Route exact path="/banner" element={<Banners />} />
         <Route exact path="/addcourse" element={<AddCourse />} />
         <Route exact path="/addmember" element={<AddMember />} />
         <Route exact path="/signup" element={<Signup />} />

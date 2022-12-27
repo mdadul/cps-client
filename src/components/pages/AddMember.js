@@ -6,8 +6,6 @@ import InstructorAddForm from "../InstrutorAddFrom";
 import Illustration from "../Illustration";
 import add from "../../img/add.png";
 
-import Banner from "../Banner";
-
 export default function AddMember() {
   useEffect(() => {
     document.title = "Add Member-CPS";
@@ -19,7 +17,7 @@ export default function AddMember() {
         <InstructorAddForm />
         <Illustration src={add} />
       </div>
-      <Banner />
+
       <Footer />
     </>
   );
