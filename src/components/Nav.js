@@ -20,18 +20,27 @@ export default function Nav() {
             <Link to="/">Home</Link>
           </li>
           <li>
+            <Link to="/banner">Banner</Link>
+          </li>
+          <li>
             <Link to="/courses">Courses</Link>
           </li>
           <li>
             <Link to="/contact">Contact Us</Link>
           </li>
-
           <li>
+            <Link to="/addcourse">Add Course</Link>
+          </li>
+          <li>
+            <Link to="/addmember">Add Member</Link>
+          </li>
+
+          {/* <li>
             <Link to="/signup">Sign Up</Link>
           </li>
           <li>
             <Link to="/signin">Sign In</Link>
-          </li>
+          </li> */}
         </ul>
       </div>
     </nav>

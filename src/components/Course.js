@@ -1,21 +1,15 @@
-import React, { useState } from "react";
+import React from "react";
 import classes from "../stylesheet/Course.module.css";
 import { FcGraduationCap } from "react-icons/fc";
 import { FcSurvey } from "react-icons/fc";
 import { FcAlarmClock } from "react-icons/fc";
 import { HiUserGroup } from "react-icons/hi";
 import { AiTwotoneDelete } from "react-icons/ai";
+import { Link } from "react-router-dom";
 
-import Modal from "./Modal";
-import CourseForm from "./CourseForm";
-// import image from '../img/edu1.gif'
 export default function Course(props) {
-  const [show, setShow] = useState(false);
-
-  const handleToggle = () => {
-    setShow(!show);
-  };
   const {
+    _id,
     image,
     title,
     price,
@@ -24,15 +18,9 @@ export default function Course(props) {
     totalTime,
     totalStudent,
   } = props.ourCourse;
+  const { handleDeleteCourse } = props;
   return (
     <>
-      {show && (
-        <Modal>
-          <CourseForm title="Edit Course" btnTitle="Edit Course" />
-          <button onClick={handleToggle}>Close </button>
-        </Modal>
-      )}
-
       <div className={classes.course}>
         <img src={image} alt="course-banner" />
         <div className={classes.type}>
@@ -62,8 +50,11 @@ export default function Course(props) {
           </p>
         </div>
         <div className={classes.coursebtn}>
-          <button onClick={handleToggle}>Edit</button>
-          <button>
+          <Link to={`/updatecourse/${_id}`}>
+            {" "}
+            <button>Edit</button>
+          </Link>
+          <button onClick={() => handleDeleteCourse(_id)}>
             Delete <AiTwotoneDelete />
           </button>
         </div>

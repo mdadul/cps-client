@@ -4,6 +4,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 // import image for slide
 import image from "../img/programming.gif";
+import learn from '../img/learn.gif';
+import machine from '../img/machine.gif';
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
@@ -58,7 +60,7 @@ export default function Banner() {
               </p>
               <button> Get Started </button>
             </div>
-            <Illustration src={image} />
+            <Illustration src={learn} />
           </div>
         </SwiperSlide>
         <SwiperSlide>
@@ -67,12 +69,12 @@ export default function Banner() {
               <h1>On Demand Mentorship for aspiring creatives</h1>
               <p>
                 Find the perfect mentor to help you launch your creative career.
-                Easily scheduled vedio chats with out community of experts to
+                Easily scheduled vedio chats with our community of experts to
                 get help with Design, Coding,UX and more.
               </p>
               <button> Find Your Mentor </button>
             </div>
-            <Illustration src={image} />
+            <Illustration src={machine} />
           </div>
         </SwiperSlide>
       </Swiper>
