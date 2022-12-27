@@ -5,7 +5,7 @@ import Course from "./Course";
 export default function Courses() {
   const [courses, setCourses] = useState([]);
   useEffect(() => {
-    fetch("https://cps.cyclic.app/courses")
+    fetch("http://localhost:5000/courses")
       .then((res) => res.json())
       .then((data) => setCourses(data));
   }, []);

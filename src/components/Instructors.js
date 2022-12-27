@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 export default function Instructors() {
   const [instructors, setInstructor] = useState([]);
   useEffect(() => {
-    fetch("https://cps.cyclic.app/instructors")
+    fetch("http://localhost:5000/instructors")
       .then((res) => res.json())
       .then((data) => setInstructor(data));
   }, []);
