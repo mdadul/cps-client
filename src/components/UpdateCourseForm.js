@@ -28,15 +28,14 @@ export default function UpdateCourseForm() {
   console.log(statusId);
 
   const [course, setCourse] = useState({});
-  const url = `http://localhost:5000/instructors/${statusId}`;
-  // console.log(url);
+
   useEffect(() => {
-    fetch(url)
+    fetch(`http://localhost:5000/instructors/${statusId}`)
       .then((res) => res.json())
       .then((data) => {
         setCourse(data);
       });
-  }, []);
+  }, [statusId]);
 
   const handleUpdateStatus = (e) => {
     setCourse({
@@ -49,9 +48,7 @@ export default function UpdateCourseForm() {
       totalStudent,
     });
 
-    const url = `http://localhost:5000/instructors/${statusId}`;
-    console.log(url);
-    fetch(url, {
+    fetch(`http://localhost:5000/instructors/${statusId}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",
@@ -64,7 +61,6 @@ export default function UpdateCourseForm() {
           alert("Successfully Updated");
           setCourse({});
         }
-        
       });
     e.preventDefault();
   };
