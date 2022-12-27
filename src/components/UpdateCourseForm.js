@@ -35,7 +35,7 @@ export default function UpdateCourseForm() {
       .then((data) => {
         setCourse(data);
       });
-  }, []);
+  }, [statusId]);
 
   const handleUpdateStatus = (e) => {
     setCourse({
