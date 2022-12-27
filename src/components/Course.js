@@ -50,7 +50,7 @@ export default function Course(props) {
           </p>
         </div>
         <div className={classes.coursebtn}>
-          <Link to="/updatecourse/{_id}">
+          <Link to={`/updatecourse/${_id}`}>
             {" "}
             <button>Edit</button>
           </Link>
