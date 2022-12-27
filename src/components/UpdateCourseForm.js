@@ -16,14 +16,6 @@ import {
 } from "react-icons/fc";
 
 export default function UpdateCourseForm() {
-  const [image, setImage] = useState("");
-  const [title, setTitle] = useState("");
-  const [price, setPrice] = useState("");
-  const [totalClass, setTotalClass] = useState("");
-  const [totalSheet, setTotalSheet] = useState("");
-  const [totalHours, setTotalHours] = useState("");
-  const [totalStudent, setTotalStudent] = useState("");
-
   const { statusId } = useParams();
   console.log(statusId);
 
@@ -36,7 +28,93 @@ export default function UpdateCourseForm() {
         setCourse(data);
       });
   }, [statusId]);
+  const handleImageChange = (e) => {
+    const updateImage = e.target.value;
 
+    const updateCourse = {
+      image: updateImage,
+      title: course.title,
+      price: course.price,
+      totalClass: course.totalClass,
+      totalHours: course.totalHours,
+      totalStudent: course.totalStudent,
+    };
+    setCourse(updateCourse);
+  };
+  const handleTitleChange = (e) => {
+    const updateTitle = e.target.value;
+
+    const updateCourse = {
+      image: updateImage,
+      title: updateTitle,
+      price: course.price,
+      totalClass: course.totalClass,
+      totalHours: course.totalHours,
+      totalStudent: course.totalStudent,
+    };
+    setCourse(updateCourse);
+  };
+  const handlePriceChange = (e) => {
+    const updatePrice = e.target.value;
+    const updateCourse = {
+      image: updateImage,
+      title: course.title,
+      price: updatePrice,
+      totalClass: course.totalClass,
+      totalHours: course.totalHours,
+      totalStudent: course.totalStudent,
+    };
+    setCourse(updateCourse);
+  };
+  const handleClassChange = (e) => {
+    const updateTotalClass = e.target.value;
+    const updateCourse = {
+      image: updateImage,
+      title: course.title,
+      price: course.price,
+      totalClass: updateTotalClass,
+      totalHours: course.totalHours,
+      totalStudent: course.totalStudent,
+    };
+    setCourse(updateCourse);
+  };
+  const handleSheetChange = (e) => {
+    const updateSheet = e.target.value;
+    const updateCourse = {
+      image: updateImage,
+      title: course.title,
+      price: course.price,
+      totalClass: course.totalClass,
+      totalSheet: updateSheet,
+      totalHours: course.totalHours,
+      totalStudent: course.totalStudent,
+    };
+    setCourse(updateCourse);
+  };
+  const handleHoursChange = (e) => {
+    const updateTotalHour = e.target.value;
+    const updateCourse = {
+      image: updateImage,
+      title: course.title,
+      price: course.price,
+      totalClass: course.totalClass,
+      totalHours: updateTotalHour,
+      totalStudent: course.totalStudent,
+    };
+    setCourse(updateCourse);
+  };
+  const handleStudentChange = (e) => {
+    const updateTotalStudent = e.target.value;
+    const updateCourse = {
+      image: updateImage,
+      title: course.title,
+      price: course.price,
+      totalClass: course.totalClass,
+      totalHours: course.totalHours,
+      totalStudent: updateTotalStudent,
+    };
+    setCourse(updateCourse);
+  };
   const handleUpdateStatus = (e) => {
     setCourse({
       image,
@@ -77,7 +155,7 @@ export default function UpdateCourseForm() {
             <input
               type="text"
               placeholder="Enter Image Link"
-              onChange={(e) => setImage(e.target.value)}
+              onChange={handleImageChange}
               value={course.image || " "}
               required
             />
@@ -90,7 +168,7 @@ export default function UpdateCourseForm() {
               type="text"
               placeholder="Enter Course Title"
               required
-              onChange={(e) => setTitle(e.target.value)}
+              onChange={handleTitleChange}
               value={course.title || " "}
             />
             <h2>
@@ -102,7 +180,7 @@ export default function UpdateCourseForm() {
               type="text"
               placeholder="Enter Course Price"
               required
-              onChange={(e) => setPrice(e.target.value)}
+              onChange={handlePriceChange}
               value={course.price || " "}
             />
             <h2>
@@ -113,7 +191,7 @@ export default function UpdateCourseForm() {
             <input
               type="text"
               placeholder="Enter Total Classes"
-              onChange={(e) => setTotalClass(e.target.value)}
+              onChange={handleClassChange}
               value={course.totalClass || " "}
               required
             />
@@ -126,7 +204,7 @@ export default function UpdateCourseForm() {
               type="text"
               placeholder="Enter Total Lecture Sheet"
               required
-              onChange={(e) => setTotalSheet(e.target.value)}
+              onChange={handleSheetChange}
               value={course.totalSheet || " "}
             />
             <h2>
@@ -138,7 +216,7 @@ export default function UpdateCourseForm() {
               type="text"
               placeholder="Enter Total Time to finish"
               required
-              onChange={(e) => setTotalHours(e.target.value)}
+              onChange={handleHoursChange}
               value={course.totalHours || " "}
             />
             <h2>
@@ -149,7 +227,7 @@ export default function UpdateCourseForm() {
             <input
               type="text"
               placeholder="Enter Total Enrolled Student"
-              onChange={(e) => setTotalStudent(e.target.value)}
+              onChange={handleStudentChange}
               value={course.totalStudent || " "}
               required
             />
