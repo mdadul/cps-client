@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Form from "./Form";
 import classes from "../stylesheet/TextInput.module.css";
-import { useParams } from "react-router-dom";
+import {  useParams } from "react-router-dom";
 import update from "../img/update.svg";
 import Illustration from "./Illustration";
 //  icon import from react icons
@@ -22,12 +22,14 @@ export default function UpdateCourseForm() {
   const [course, setCourse] = useState({});
 
   useEffect(() => {
-    fetch(`http://localhost:5000/instructors/${statusId}`)
+    fetch(`http://localhost:5000/courses/${statusId}`)
       .then((res) => res.json())
       .then((data) => {
         setCourse(data);
       });
   }, [statusId]);
+
+
   const handleImageChange = (e) => {
     const updateImage = e.target.value;
 
@@ -36,52 +38,65 @@ export default function UpdateCourseForm() {
       title: course.title,
       price: course.price,
       totalClass: course.totalClass,
+      totalSheet : course.totalSheet,
       totalHours: course.totalHours,
       totalStudent: course.totalStudent,
     };
     setCourse(updateCourse);
   };
+
+  // handle title change 
   const handleTitleChange = (e) => {
     const updateTitle = e.target.value;
 
     const updateCourse = {
-      image: updateImage,
+      image: course.image,
       title: updateTitle,
       price: course.price,
       totalClass: course.totalClass,
+      totalSheet : course.totalSheet,
       totalHours: course.totalHours,
       totalStudent: course.totalStudent,
     };
     setCourse(updateCourse);
   };
+
+  // handle price change 
   const handlePriceChange = (e) => {
     const updatePrice = e.target.value;
+
     const updateCourse = {
-      image: updateImage,
+      image: course.image,
       title: course.title,
       price: updatePrice,
       totalClass: course.totalClass,
+      totalSheet : course.totalSheet,
       totalHours: course.totalHours,
       totalStudent: course.totalStudent,
     };
     setCourse(updateCourse);
   };
+
+  // handle total class change 
   const handleClassChange = (e) => {
     const updateTotalClass = e.target.value;
     const updateCourse = {
-      image: updateImage,
+      image: course.image,
       title: course.title,
       price: course.price,
       totalClass: updateTotalClass,
+      totalSheet : course.totalSheet,
       totalHours: course.totalHours,
       totalStudent: course.totalStudent,
     };
     setCourse(updateCourse);
   };
+
+  // handle total sheet change 
   const handleSheetChange = (e) => {
     const updateSheet = e.target.value;
     const updateCourse = {
-      image: updateImage,
+      image: course.image,
       title: course.title,
       price: course.price,
       totalClass: course.totalClass,
@@ -91,13 +106,16 @@ export default function UpdateCourseForm() {
     };
     setCourse(updateCourse);
   };
+
+  // handle total hour change 
   const handleHoursChange = (e) => {
     const updateTotalHour = e.target.value;
     const updateCourse = {
-      image: updateImage,
+      image: course.image,
       title: course.title,
       price: course.price,
       totalClass: course.totalClass,
+      totalSheet : course.totalSheet,
       totalHours: updateTotalHour,
       totalStudent: course.totalStudent,
     };
@@ -106,27 +124,18 @@ export default function UpdateCourseForm() {
   const handleStudentChange = (e) => {
     const updateTotalStudent = e.target.value;
     const updateCourse = {
-      image: updateImage,
+      image: course.image,
       title: course.title,
       price: course.price,
       totalClass: course.totalClass,
+      totalSheet : course.totalSheet,
       totalHours: course.totalHours,
       totalStudent: updateTotalStudent,
     };
     setCourse(updateCourse);
   };
   const handleUpdateStatus = (e) => {
-    setCourse({
-      image,
-      title,
-      price,
-      totalClass,
-      totalSheet,
-      totalHours,
-      totalStudent,
-    });
-
-    fetch(`http://localhost:5000/instructors/${statusId}`, {
+    fetch(`http://localhost:5000/courses/${statusId}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",
