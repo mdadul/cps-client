@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Form from "./Form";
 import classes from "../stylesheet/TextInput.module.css";
-import {  useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import update from "../img/update.svg";
 import Illustration from "./Illustration";
 //  icon import from react icons
@@ -16,18 +16,16 @@ import {
 } from "react-icons/fc";
 
 export default function UpdateCourseForm() {
-  const { statusId } = useParams();
-  console.log(statusId);
+  const { id } = useParams();
+  console.log(id);
 
   const [course, setCourse] = useState({});
 
   useEffect(() => {
-    fetch(`http://localhost:5000/courses/${statusId}`)
+    fetch(`http://localhost:5000/courses/${id}`)
       .then((res) => res.json())
-      .then((data) => {
-        setCourse(data);
-      });
-  }, [statusId]);
+      .then((data) => setCourse(data));
+  }, [id]);
 
 
   const handleImageChange = (e) => {
@@ -38,8 +36,8 @@ export default function UpdateCourseForm() {
       title: course.title,
       price: course.price,
       totalClass: course.totalClass,
-      totalSheet : course.totalSheet,
-      totalHours: course.totalHours,
+      totalLecture : course.totalLecture,
+      totalTime: course.totalTime,
       totalStudent: course.totalStudent,
     };
     setCourse(updateCourse);
@@ -54,8 +52,8 @@ export default function UpdateCourseForm() {
       title: updateTitle,
       price: course.price,
       totalClass: course.totalClass,
-      totalSheet : course.totalSheet,
-      totalHours: course.totalHours,
+      totalLecture : course.totalLecture,
+      totalTime: course.totalTime,
       totalStudent: course.totalStudent,
     };
     setCourse(updateCourse);
@@ -70,8 +68,8 @@ export default function UpdateCourseForm() {
       title: course.title,
       price: updatePrice,
       totalClass: course.totalClass,
-      totalSheet : course.totalSheet,
-      totalHours: course.totalHours,
+      totalLecture : course.totalLecture,
+      totalTime: course.totalTime,
       totalStudent: course.totalStudent,
     };
     setCourse(updateCourse);
@@ -85,8 +83,8 @@ export default function UpdateCourseForm() {
       title: course.title,
       price: course.price,
       totalClass: updateTotalClass,
-      totalSheet : course.totalSheet,
-      totalHours: course.totalHours,
+      totalLecture : course.totalLecture,
+      totalTime: course.totalTime,
       totalStudent: course.totalStudent,
     };
     setCourse(updateCourse);
@@ -100,8 +98,8 @@ export default function UpdateCourseForm() {
       title: course.title,
       price: course.price,
       totalClass: course.totalClass,
-      totalSheet: updateSheet,
-      totalHours: course.totalHours,
+      totalLecture: updateSheet,
+      totalTime: course.totalTime,
       totalStudent: course.totalStudent,
     };
     setCourse(updateCourse);
@@ -115,8 +113,8 @@ export default function UpdateCourseForm() {
       title: course.title,
       price: course.price,
       totalClass: course.totalClass,
-      totalSheet : course.totalSheet,
-      totalHours: updateTotalHour,
+      totalLecture : course.totalLecture,
+      totalTime: updateTotalHour,
       totalStudent: course.totalStudent,
     };
     setCourse(updateCourse);
@@ -128,14 +126,14 @@ export default function UpdateCourseForm() {
       title: course.title,
       price: course.price,
       totalClass: course.totalClass,
-      totalSheet : course.totalSheet,
-      totalHours: course.totalHours,
+      totalLecture : course.totalLecture,
+      totalTime: course.totalTime,
       totalStudent: updateTotalStudent,
     };
     setCourse(updateCourse);
   };
   const handleUpdateStatus = (e) => {
-    fetch(`http://localhost:5000/courses/${statusId}`, {
+    fetch(`http://localhost:5000/courses/${id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",
@@ -159,13 +157,12 @@ export default function UpdateCourseForm() {
 
         <Form style={{ height: "520px" }} onSubmit={handleUpdateStatus}>
           <h2>Update Course</h2>
-          <h1>Id {statusId}</h1>
+          <h1>Id {id}</h1>
           <div className={classes.textInput}>
             <input
               type="text"
-              placeholder="Enter Image Link"
-              onChange={handleImageChange}
               value={course.image || " "}
+              onChange={handleImageChange}
               required
             />
             <h2>
@@ -175,10 +172,10 @@ export default function UpdateCourseForm() {
           <div className={classes.textInput}>
             <input
               type="text"
-              placeholder="Enter Course Title"
+              value={course.title || " "}
               required
               onChange={handleTitleChange}
-              value={course.title || " "}
+              
             />
             <h2>
               <FcAddDatabase />
@@ -187,10 +184,10 @@ export default function UpdateCourseForm() {
           <div className={classes.textInput}>
             <input
               type="text"
-              placeholder="Enter Course Price"
+              value={course.price || " "}
               required
               onChange={handlePriceChange}
-              value={course.price || " "}
+              
             />
             <h2>
               <FcCurrencyExchange />
@@ -200,8 +197,8 @@ export default function UpdateCourseForm() {
             <input
               type="text"
               placeholder="Enter Total Classes"
-              onChange={handleClassChange}
               value={course.totalClass || " "}
+              onChange={handleClassChange}
               required
             />
             <h2>
@@ -211,10 +208,10 @@ export default function UpdateCourseForm() {
           <div className={classes.textInput}>
             <input
               type="text"
-              placeholder="Enter Total Lecture Sheet"
               required
+              value={course.totalLecture || " "}
               onChange={handleSheetChange}
-              value={course.totalSheet || " "}
+              
             />
             <h2>
               <FcInspection />
@@ -225,8 +222,9 @@ export default function UpdateCourseForm() {
               type="text"
               placeholder="Enter Total Time to finish"
               required
+              value={course.totalTime || " "}
               onChange={handleHoursChange}
-              value={course.totalHours || " "}
+              
             />
             <h2>
               <FcDisplay />
@@ -236,8 +234,8 @@ export default function UpdateCourseForm() {
             <input
               type="text"
               placeholder="Enter Total Enrolled Student"
-              onChange={handleStudentChange}
               value={course.totalStudent || " "}
+              onChange={handleStudentChange}
               required
             />
             <h2>

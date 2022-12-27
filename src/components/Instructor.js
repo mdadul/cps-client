@@ -7,7 +7,7 @@ import { BsGithub, BsLinkedin } from "react-icons/bs";
 
 export default function Instructor(props) {
   const { image, name, designation, institution } = props.ourInstrutors;
-  console.log(props.ourInstrutors);
+  
   return (
     <div className={classes.card}>
       <img src={image} alt="member-avater" style={{ width: "100%" }} />

@@ -18,7 +18,9 @@ export default function Course(props) {
     totalTime,
     totalStudent,
   } = props.ourCourse;
+
   const { handleDeleteCourse } = props;
+
   return (
     <>
       <div className={classes.course}>
@@ -49,9 +51,10 @@ export default function Course(props) {
             <HiUserGroup /> {totalStudent} Students
           </p>
         </div>
+
+
         <div className={classes.coursebtn}>
           <Link to={`/updatecourse/${_id}`}>
-            {" "}
             <button>Edit</button>
           </Link>
           <button onClick={() => handleDeleteCourse(_id)}>
