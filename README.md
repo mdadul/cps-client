@@ -4,7 +4,13 @@
 
 <img src='src/img/logo-no-background.png' width='50%'>
 
+### Features 
+	* Add New Course 
+	* Update Course
+	* Delete Course 
+	* Add Member/ Instructor 
 
+	* Progressive Web App 
 ### Author
     * Emdadul Islam, C201041
     * Sorowar Mahbub, C201032
