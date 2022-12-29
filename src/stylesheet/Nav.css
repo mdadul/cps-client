@@ -40,22 +40,22 @@ Nav ul {
   align-items: center;
   margin: 10px 5px;
 }
-.menu ul li {
+.menu  li {
   list-style: none;
   margin: 10px;
 }
 
-.menu ul li a {
+.menu li a {
   text-decoration: none;
   color: var(--white);
   font-size: 16px;
   font-weight: 400;
 }
-.menu ul li a:hover {
+.menu li a:hover {
   color: #fff;
   opacity: 1;
 }
-.menu ul li:last-child a {
+.menu li:last-child a {
   color: var(--white);
   margin-right: 0px;
   padding: 10px 15px;
@@ -64,21 +64,18 @@ Nav ul {
   border-radius: 5px;
 }
 
-.menu ul li:nth-last-child(2) a {
+.menu li:nth-last-child(2) a {
   padding: 10px 15px;
   cursor: pointer;
   border-radius: 5px;
   background-color: #fff;
   color: var(--primary);
 }
-.toggle {
-  display: none;
+.menuIcon{
   cursor: pointer;
+  display: none;
 }
-@media screen and (max-width: 1024px) {
-  .toggle {
-    display: block;
-  }
+@media screen and (max-width: 1350px) {
   nav {
     grid-template-columns: 1fr;
   }
@@ -88,24 +85,31 @@ Nav ul {
   .brand img {
     width: 48px;
   }
-  .menu ul {
-    display: none;
-    /* display: flex; */
+  .menuIcon{
+    display: block;
+  }
+  .menu{
+    
+    display: flex; 
     justify-content: flex-start;
     align-items: flex-start;
     flex-direction: column;
     padding: 40px 0 0 20px;
     position: fixed;
-    top: 53px;
-    right: -10px;
+    top: 48px;
+    right: -350px;
     width: 250px;
     height: 100vh;
     background-color: blueviolet;
+    transition: 0.3 ease-in-out;
   }
-  .menu ul li:last-child {
+  .menu.active {
+    right : -10px;
+  }
+  .menu li:last-child {
     margin-top: 20px;
   }
-  .menu ul li:nth-last-child(2) {
+  .menu li:nth-last-child(2) {
     margin-top: 20px;
   }
 }

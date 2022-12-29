@@ -1,21 +1,36 @@
-import React from "react";
-import classes from "../stylesheet/Nav.module.css";
+import React , {useState} from "react";
+import "../stylesheet/Nav.css";
 import Logo from "../img/logo-black.png";
 import { Link } from "react-router-dom";
-
+import { FcMenu } from "react-icons/fc";
 export default function Nav() {
-  return (
+
+  const [showNavbar, setShowNavbar] = useState(false)
+
+  const handleShowNavbar = () => {
+    setShowNavbar(!showNavbar)
+  }
+
+  return (  
     <nav>
-      <div className={classes.brand}>
+      <div className="brand">
         <Link to="/">
-          <div className={classes.brandTitle}>
+          <div className="brandTitle">
             <img src={Logo} alt="cps-logo" />
             <h3>CHOLO PROGRAMMING SHIKHI</h3>
           </div>
         </Link>
+        <div className="menuIcon" onClick={handleShowNavbar}>
+              <h1><FcMenu></FcMenu></h1>
+        </div>
+
       </div>
-      <div className={classes.menu}>
-        <ul>
+     
+      <div>
+        
+        <ul className={
+          showNavbar ? "menu active" : "menu"
+        }>
           <li>
             <Link to="/">Home</Link>
           </li>
