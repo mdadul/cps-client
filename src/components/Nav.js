@@ -14,12 +14,16 @@ export default function Nav() {
   return (  
     <nav>
       <div className="brand">
+        <div>
         <Link to="/">
           <div className="brandTitle">
             <img src={Logo} alt="cps-logo" />
             <h3>CHOLO PROGRAMMING SHIKHI</h3>
           </div>
         </Link>
+
+        </div>
+       
         <div className="menuIcon" onClick={handleShowNavbar}>
               <h1><FcMenu></FcMenu></h1>
         </div>
