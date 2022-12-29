@@ -12,5 +12,20 @@
 
 	* Progressive Web App 
 ### Author
-    * Emdadul Islam, C201041
-    * Sorowar Mahbub, C201032
+- [Engr. Sorowar Mahabub, C201032, Dept. of CSE, IIUC](https://github.com/sorowar-cse)
+- [EMDADUL ISLAM, C201041, Dept. of CSE, IIUC](https://github.com/mdadul/)
+
+### Tech Stack
+**Client** 
+- HTML
+- CSS
+- JS
+- REACT JS
+- Swiper js
+	
+**Server** 
+- Node js
+- Express Js
+	
+**Database**
+- MongoDB
