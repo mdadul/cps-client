@@ -44,6 +44,8 @@ export default function CourseForm() {
     };
 
     // post course via API
+    // fetch("http://localhost:5000/courses", {
+      
     fetch("https://cps.cyclic.app/courses", {
       method: "POST",
       headers: {

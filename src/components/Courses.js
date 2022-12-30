@@ -6,7 +6,8 @@ import Course from "./Course";
 export default function Courses() {
   const [courses, setCourses] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/courses")
+    //     fetch("http://localhost:5000/courses")
+    fetch("https://cps.cyclic.app/courses")
       .then((res) => res.json())
       .then((data) => setCourses(data));
   }, [courses]);
@@ -14,7 +15,8 @@ export default function Courses() {
   const handleDeleteCourse = (id)=>{
     const proceed = window.confirm('Are you sure, want to delete?')
     if(proceed){
-      fetch(`http://localhost:5000/courses/${id}`,{
+      // fetch(`http://localhost:5000/courses/${id}`,{
+      fetch(`https://cps.cyclic.app/courses/${id}`,{
         method: 'DELETE',
       })
       .then((res)=> res.json())
