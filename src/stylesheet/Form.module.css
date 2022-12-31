@@ -9,9 +9,11 @@
   margin-top: 0.5rem;
 }
 
-.form .button {
-  height: 20px;
+.form button {
+  height: 40px;
   margin-top: 2rem;
+  background-color: var(--primary);
+  
 }
 
 @media only screen and (max-width: 600px) {
