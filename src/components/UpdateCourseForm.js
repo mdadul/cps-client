@@ -4,6 +4,9 @@ import classes from "../stylesheet/TextInput.module.css";
 import { useParams } from "react-router-dom";
 import update from "../img/update.svg";
 import Illustration from "./Illustration";
+import Nav from './Nav';
+import Footer from './Footer';
+
 //  icon import from react icons
 import {
   FcAddImage,
@@ -152,12 +155,12 @@ export default function UpdateCourseForm() {
 
   return (
     <>
+    <Nav/>
       <div className="container column">
         <Illustration src={update} />
 
         <Form style={{ height: "520px" }} onSubmit={handleUpdateStatus}>
           <h2>Update Course</h2>
-          <h1>Id {id}</h1>
           <div className={classes.textInput}>
             <input
               type="text"
@@ -246,6 +249,8 @@ export default function UpdateCourseForm() {
           <button type="submit">Update Course</button>
         </Form>
       </div>
+
+      <Footer/>
     </>
   );
 }
