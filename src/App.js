@@ -4,7 +4,7 @@ import Login from "./components/pages/SignIn";
 import ContactUs from "./components/pages/Contact";
 import Courses from "./components/pages/Courses";
 import UpdateCourseForm from "./components/UpdateCourseForm";
-
+import NotFound from "./components/404NotFound";
 import "./stylesheet/App.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Banners from "./components/pages/Banners";
@@ -23,7 +23,7 @@ function App() {
         <Route exact path="/contact" element={<ContactUs />} />
         <Route exact path="/courses" element={<Courses />} />
         <Route exact path="/updatecourse/:id" element={<UpdateCourseForm />} />
-        <Route path="*" element={<h1>404 Not Found</h1>} />
+        <Route path="*" element={<NotFound/>} />
       </Routes>
     </Router>
   );
