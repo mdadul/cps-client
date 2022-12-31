@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import classes from '../stylesheet/404NotFound.module.css';
 
 export default function NotFound (){
     return (
