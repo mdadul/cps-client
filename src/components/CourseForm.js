@@ -45,8 +45,9 @@ export default function CourseForm() {
 
     // post course via API
     // fetch("http://localhost:5000/courses", {
-      
-    fetch("https://cps.cyclic.app/courses", {
+
+    // fetch("https://cps.cyclic.app/courses", {
+    fetch("https://cps.onrender.com/courses", {
       method: "POST",
       headers: {
         "content-type": "application/json",

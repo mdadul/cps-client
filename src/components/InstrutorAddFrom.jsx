@@ -41,7 +41,8 @@ export default function InstructorAddForm() {
 
     // post couse via API
     // fetch("https://cps.cyclic.app/instructors", {
-    fetch("http://localhost:5000/instructors", {
+    // fetch("http://localhost:5000/instructors", {
+    fetch("https://cps.onrender.com/instructors", {
       method: "POST",
       headers: {
         "content-type": "application/json",
