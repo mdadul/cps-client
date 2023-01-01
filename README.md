@@ -4,6 +4,21 @@
 
 <img src='src/img/logo-no-background.png' width='50%'>
 
+### How to use
+Download the code or clone the repo:
+
+	git clone https://github.com/mdadul/cps-client.git
+
+
+**Install it and run:**
+
+	npm install
+	npm start
+
+
+
+
+
 ### Features 
 	* Add New Course 
 	* Update Course
