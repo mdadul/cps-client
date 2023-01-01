@@ -4,8 +4,8 @@ import classes from "../stylesheet/TextInput.module.css";
 import { useParams } from "react-router-dom";
 import update from "../img/update.svg";
 import Illustration from "./Illustration";
-import Nav from './Nav';
-import Footer from './Footer';
+import Nav from "./Nav";
+import Footer from "./Footer";
 
 //  icon import from react icons
 import {
@@ -25,11 +25,11 @@ export default function UpdateCourseForm() {
   const [course, setCourse] = useState({});
 
   useEffect(() => {
-    fetch(`http://localhost:5000/courses/${id}`)
+    // fetch(`http://localhost:5000/courses/${id}`)
+    fetch(`https://cps.onrender.com/courses/${id}`)
       .then((res) => res.json())
       .then((data) => setCourse(data));
   }, [id]);
-
 
   const handleImageChange = (e) => {
     const updateImage = e.target.value;
@@ -39,14 +39,14 @@ export default function UpdateCourseForm() {
       title: course.title,
       price: course.price,
       totalClass: course.totalClass,
-      totalLecture : course.totalLecture,
+      totalLecture: course.totalLecture,
       totalTime: course.totalTime,
       totalStudent: course.totalStudent,
     };
     setCourse(updateCourse);
   };
 
-  // handle title change 
+  // handle title change
   const handleTitleChange = (e) => {
     const updateTitle = e.target.value;
 
@@ -55,14 +55,14 @@ export default function UpdateCourseForm() {
       title: updateTitle,
       price: course.price,
       totalClass: course.totalClass,
-      totalLecture : course.totalLecture,
+      totalLecture: course.totalLecture,
       totalTime: course.totalTime,
       totalStudent: course.totalStudent,
     };
     setCourse(updateCourse);
   };
 
-  // handle price change 
+  // handle price change
   const handlePriceChange = (e) => {
     const updatePrice = e.target.value;
 
@@ -71,14 +71,14 @@ export default function UpdateCourseForm() {
       title: course.title,
       price: updatePrice,
       totalClass: course.totalClass,
-      totalLecture : course.totalLecture,
+      totalLecture: course.totalLecture,
       totalTime: course.totalTime,
       totalStudent: course.totalStudent,
     };
     setCourse(updateCourse);
   };
 
-  // handle total class change 
+  // handle total class change
   const handleClassChange = (e) => {
     const updateTotalClass = e.target.value;
     const updateCourse = {
@@ -86,14 +86,14 @@ export default function UpdateCourseForm() {
       title: course.title,
       price: course.price,
       totalClass: updateTotalClass,
-      totalLecture : course.totalLecture,
+      totalLecture: course.totalLecture,
       totalTime: course.totalTime,
       totalStudent: course.totalStudent,
     };
     setCourse(updateCourse);
   };
 
-  // handle total sheet change 
+  // handle total sheet change
   const handleSheetChange = (e) => {
     const updateSheet = e.target.value;
     const updateCourse = {
@@ -108,7 +108,7 @@ export default function UpdateCourseForm() {
     setCourse(updateCourse);
   };
 
-  // handle total hour change 
+  // handle total hour change
   const handleHoursChange = (e) => {
     const updateTotalHour = e.target.value;
     const updateCourse = {
@@ -116,7 +116,7 @@ export default function UpdateCourseForm() {
       title: course.title,
       price: course.price,
       totalClass: course.totalClass,
-      totalLecture : course.totalLecture,
+      totalLecture: course.totalLecture,
       totalTime: updateTotalHour,
       totalStudent: course.totalStudent,
     };
@@ -129,14 +129,15 @@ export default function UpdateCourseForm() {
       title: course.title,
       price: course.price,
       totalClass: course.totalClass,
-      totalLecture : course.totalLecture,
+      totalLecture: course.totalLecture,
       totalTime: course.totalTime,
       totalStudent: updateTotalStudent,
     };
     setCourse(updateCourse);
   };
   const handleUpdateStatus = (e) => {
-    fetch(`http://localhost:5000/courses/${id}`, {
+    // fetch(`http://localhost:5000/courses/${id}`, {
+    fetch(`https://cps.onrender.com/courses/${id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",
@@ -155,7 +156,7 @@ export default function UpdateCourseForm() {
 
   return (
     <>
-    <Nav/>
+      <Nav />
       <div className="container column">
         <Illustration src={update} />
 
@@ -178,7 +179,6 @@ export default function UpdateCourseForm() {
               value={course.title || " "}
               required
               onChange={handleTitleChange}
-              
             />
             <h2>
               <FcAddDatabase />
@@ -190,7 +190,6 @@ export default function UpdateCourseForm() {
               value={course.price || " "}
               required
               onChange={handlePriceChange}
-              
             />
             <h2>
               <FcCurrencyExchange />
@@ -214,7 +213,6 @@ export default function UpdateCourseForm() {
               required
               value={course.totalLecture || " "}
               onChange={handleSheetChange}
-              
             />
             <h2>
               <FcInspection />
@@ -227,7 +225,6 @@ export default function UpdateCourseForm() {
               required
               value={course.totalTime || " "}
               onChange={handleHoursChange}
-              
             />
             <h2>
               <FcDisplay />
@@ -250,7 +247,7 @@ export default function UpdateCourseForm() {
         </Form>
       </div>
 
-      <Footer/>
+      <Footer />
     </>
   );
 }
