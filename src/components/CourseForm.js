@@ -60,6 +60,9 @@ export default function CourseForm() {
           alert("Successfully added the Course!");
           e.target.reset();
         }
+        else{
+          alert("Something went wrong! Please try again later.")
+        }
       });
   };
   return (

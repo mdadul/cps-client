@@ -18,6 +18,7 @@ import { Keyboard, Pagination, Navigation } from "swiper";
 
 import Illustration from "./Illustration";
 
+// install Swiper modules
 export default function Banner() {
   return (
     <>

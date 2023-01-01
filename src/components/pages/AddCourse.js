@@ -13,12 +13,12 @@ export default function AddCourse() {
   return (
     <>
       <Nav></Nav>
-      <div className="container column">
-        <Illustration src={education} />
+      <div className="container column"> 
+        <Illustration src={education} /> 
         <CourseForm
-          title="Add New Course"
-          btnTitle="Add Course"
-          icon={<IoMdAdd />}
+          // title="Add New Course"
+          // btnTitle="Add Course"
+          // icon={<IoMdAdd />}
         />
       </div>
       <Footer></Footer>

@@ -17,14 +17,14 @@ import { IconContext } from "react-icons";
 // import Form from "../Form";
 // import TextInput from "../TextInput";
 
-export default function Contact() {
-  const form = useRef();
+export default function Contact() { 
+  const form = useRef(); 
 
-  useEffect(() => {
-    document.title = "Contact Us -CPS";
-  }, []);
-  const sendEmail = (e) => {
-    e.preventDefault();
+  useEffect(() => { 
+    document.title = "Contact Us -CPS"; 
+  }, []); 
+  const sendEmail = (e) => { 
+    e.preventDefault(); 
 
     emailjs
       .sendForm(
@@ -107,7 +107,7 @@ export default function Contact() {
               required
               name="user_email"
             />
-            <textarea rows="10" placeholder="Your Message"></textarea>
+            <textarea rows="10" placeholder="Your Message"></textarea> 
             <button type="submit">Send Message</button>
           </form>
         </div>
